@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Home|{% block title %}{% endblock %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+       <div class="navbar" style="display: flex;justify-content:space-evenly;text-align:center;">
+        <a href="{% url 'home' %}"><h1>Home</h1></a>
+        <a href="{% url 'first' %}"><h1>First</h1></a>
+        <a href="{% url 'second' %}"><h1>Second</h1></a>
+       </div>
+       <hr>
+       <div class="main my-4" style="display:flex;justify-content:center;text-align:center;">
+            {% block body %}
+
+            {% endblock %}
+       </div>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
